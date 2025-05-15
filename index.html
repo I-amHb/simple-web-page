@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profiles</title>
+    <script src="index.js" defer></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        td, .avgDiv {
+            border: 1px solid black;
+            
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        table, .avgDiv {
+            width: 200px;
+            min-height: 20px;
+        }
+
+        .avgDiv {
+            padding: 10px 0;
+            padding-left: 10px;
+        }
+
+        td {
+            text-align: center;
+
+        }
+        table {
+            margin: 5px 0;
+        }
+        p {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Profiles</h1>
+    <ul class="filters">
+        <li><a href=".">All</a></li>
+        <li><a class="_1A">1A</a></li>
+        <li><a class="_1B">1B</a></li>
+    </ul>
+    <div class="constainer" style="width: 100%; height: auto;">
+        <table class="table" style="border: 1px double black;">
+            <tr>
+                <td>Name</td>
+                <td>Class</td>
+                <td>Grade(GPA)</td>
+            </tr>
+        </table>
+        <table class="table2" style="border: 1px double black; display: none;">
+            <tr>
+                <td>Name</td>
+                <td>Class</td>
+                <td>Grade(GPA)</td>
+            </tr>
+        </table>
+        <table class="table3" style="border: 1px double black; display: none;">
+            <tr>
+                <td>Name</td>
+                <td>Class</td>
+                <td>Grade(GPA)</td>
+            </tr>
+        </table>
+        <div class="avgDiv">
+           <p>Average Grade:</p><p class="averageGrade"></p> 
+        </div>
+        
+    </div>
+    
+</body>
+</html>
