@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    /* border: 1px red solid; */
+}
+
+/* =============
+    Typography
+    ============= */
+h1 {
+    text-align: center;
+}
+
+
+
+
+
+/* Sections */
+.container {
+    /* border: 1px blue solid; */
+    padding: .5em;
+    margin: 2.5rem 0;
+}
+
+header {
+    background-color: rgb(255, 248, 220);
+    padding: 1.5em;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+}
+
+li {
+    margin: .75rem;
+
+    /* background-color: white; */
+
+}
+
+a {
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: .3rem;
+    width: 3em;
+    text-align: center;
+    background-color: white;
+    padding: .1em;
+
+
+}
+
+.sec,
+.sec_2 {
+    max-width: 550px;
+    margin: 0 auto;
+    /* border: 1px red solid; */
+}
+
+.all_t {
+    width: 100%;
+    border: 1px solid black;
+    color: white;
+    border-collapse: collapse;
+
+
+
+}
+
+td {
+    border-bottom: 1px solid;
+    color: black;
+    /* background-color: hsla(180, 99%, 33%, 0.363); */
+    padding: .5em;
+    margin: 2em;
+    
+}
+
+.tableRow {
+    width: 100%;
+}
+
+.table-head {
+    background-color: rgb(80, 134, 135);
+    font-weight: 700;
+    border: none;
+    color: white;
+}
+
+.sec {}
+
+
+
+.sec_2 {
+    padding: .6rem;
+    display: flex;
+    border: 1px solid;
+    background-color: rgb(80, 134, 135);
+    color: white;
+
+    
+    
+}
+
+p:first-child {
+    font-weight: 600;
+    padding-right: .3em;
+}

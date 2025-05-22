@@ -1,18 +1,16 @@
 const table = document.querySelector('.table');
-const table2 = document.querySelector('.table2');
-const table3 = document.querySelector('.table3');
 const gradeAverage = document.querySelector('.averageGrade')
 
 const btn_1A = document.querySelector('._1A');
 const btn_1B = document.querySelector('._1B');
 
 const profiles = [
-    { name: 'John', class: '1A', grade: 4.5 },
-    { name: 'Dave', class: '1B', grade: 4.0 },
-    { name: 'Anna', class: '1A', grade: 3.5 },
-    { name: 'Zack', class: '1B', grade: 3.3 },
-    { name: 'Gift', class: '1A', grade: 4.2 },
-    { name: 'Tolu', class: '1B', grade: 2.7 }
+    { name: 'John Doe', class: '1A', grade: 4.5 },
+    { name: 'David Banner', class: '1B', grade: 4.0 },
+    { name: 'Anna William', class: '1A', grade: 3.5 },
+    { name: 'Zack Wlack', class: '1B', grade: 3.3 },
+    { name: 'Gift Present', class: '1A', grade: 4.2 },
+    { name: 'Tolu Jacob', class: '1B', grade: 2.7 }
 ];
 
 profiles.map((val) => {
@@ -52,27 +50,28 @@ const class_1A = profiles.filter(val => {
 
 });
 
-let render1A = ()=>{
-    class_1A.forEach(val => {
+let render1A = () => {
 
-        table.style.display = 'none';
-        table2.style.display = 'block';
+    table.innerHTML = `
+  <tr>
+    <td class="table-head">Name</td>
+    <td class="table-head">Class</td>
+    <td class="table-head">Grade(GPA)</td>
+  </tr>
+`;
+    class_1A.forEach(val => {
 
 
 
         let tabRow = document.createElement('tr');
-        tabRow.setAttribute('class', 'tableRow');
 
         let tabNameData = document.createElement('td');
-        tabNameData.setAttribute('class', 'nameData');
         tabNameData.textContent = val.name;
 
         let tabClassData = document.createElement('td');
-        tabClassData.setAttribute('class', 'ClassData');
         tabClassData.textContent = val.class;
 
         let tabGradeData = document.createElement('td');
-        tabGradeData.setAttribute('class', 'GradeData');
         tabGradeData.textContent = val.grade.toFixed(1);
 
         tabRow.appendChild(tabNameData);
@@ -81,7 +80,7 @@ let render1A = ()=>{
 
 
 
-        table2.appendChild(tabRow);
+        table.appendChild(tabRow);
     })
 }
 
@@ -95,27 +94,27 @@ const class_1B = profiles.filter(val => {
 
 let render1B = () => {
 
-    class_1B.forEach(val => {
+    table.innerHTML = `
+  <tr>
+    <td class="table-head">Name</td>
+    <td class="table-head">Class</td>
+    <td class="table-head">Grade(GPA)</td>
+  </tr>
+`;
 
-        table.style.display = 'none';
-        table2.style.display = 'none';
-        table3.style.display = 'block';
+    class_1B.forEach(val => {
 
 
 
         let tabRow = document.createElement('tr');
-        tabRow.setAttribute('class', 'tableRow');
 
         let tabNameData = document.createElement('td');
-        tabNameData.setAttribute('class', 'nameData');
         tabNameData.textContent = val.name;
 
         let tabClassData = document.createElement('td');
-        tabClassData.setAttribute('class', 'ClassData');
         tabClassData.textContent = val.class;
 
         let tabGradeData = document.createElement('td');
-        tabGradeData.setAttribute('class', 'GradeData');
         tabGradeData.textContent = val.grade.toFixed(1);
 
         tabRow.appendChild(tabNameData);
@@ -124,7 +123,7 @@ let render1B = () => {
 
 
 
-        table3.appendChild(tabRow);
+        table.appendChild(tabRow);
     })
 };
 
