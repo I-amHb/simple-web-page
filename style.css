@@ -9,6 +9,7 @@
     ============= */
 h1 {
     text-align: center;
+    color: aliceblue;
 }
 
 body {
@@ -26,7 +27,7 @@ body {
 header {
     background-color:rgb(80, 134, 135);
     padding: 1.5em;
-    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 ul {
@@ -47,12 +48,17 @@ a {
     display: block;
     cursor: pointer;
     text-decoration: none;
-    border: 1px solid;
     border-radius: .3rem;
     width: 3em;
     text-align: center;
-    background-color: white;
+    background-color: aliceblue;
     padding: .1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+a:hover {
+    background-color: rgb(80, 134, 135);
+    color: antiquewhite;
 }
 
 .sec,
@@ -61,6 +67,8 @@ a {
     margin: 0 auto;
     /* border: 1px red solid; */
 }
+
+/* Table start */
 
 .all_t {
     width: 100%;
@@ -76,7 +84,7 @@ td {
     /* background-color: hsla(180, 99%, 33%, 0.363); */
     padding: .5em;
     margin: 2em;
-    background-color: white;
+    background-color: antiquewhite;
     
 }
 
@@ -88,8 +96,10 @@ td {
     background-color: rgb(80, 134, 135);
     font-weight: 700;
     border: none;
-    color: white;
+    color: aliceblue;
 }
+
+/* Table end */
 
 /* .sec {} */
 
@@ -98,10 +108,84 @@ td {
     display: flex;
     border: 1px solid black;
     background-color: rgb(80, 134, 135);
-    color: white;    
+    color: aliceblue;    
 }
 
 p:first-child {
     font-weight: 600;
     padding-right: .3em;
+}
+
+.sec_3 {
+    margin-top: 2rem;
+    /* border: 1px solid green; */
+    max-width: 1045px;
+    padding:4rem 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h2 {
+    background-color: rgb(80, 134, 135);
+    margin-bottom: 2em;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: aliceblue;
+}
+
+.img_div {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    
+    
+}
+
+.img_card {
+    /* border: 1px solid pink; */
+    background-color: antiquewhite;
+    max-width: 250px;
+    margin:2rem 0;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+img {
+    width: 100%;
+    border-radius: 50%;
+    
+}
+
+.title {
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+
+/* @media (max-width: 770px) {
+    .sec_3 {
+        margin: 0;
+    }
+} */
+
+@media (max-width: 430px) {
+    .sec_3 {
+        margin: 0;
+    }
+     .img_card {
+        max-width: 340px;
+        width: 100%;
+        margin: 0 auto;
+     }
 }

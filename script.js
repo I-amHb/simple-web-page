@@ -1,16 +1,18 @@
 const table = document.querySelector('.table');
 const gradeAverage = document.querySelector('.averageGrade')
+const imgDiv = document.querySelector('.img_div');
 
 const btn_1A = document.querySelector('._1A');
 const btn_1B = document.querySelector('._1B');
 
 const profiles = [
-    { name: 'John Doe', class: '1A', grade: 4.5 },
-    { name: 'David Banner', class: '1B', grade: 4.0 },
-    { name: 'Anna William', class: '1A', grade: 3.5 },
-    { name: 'Zack Wlack', class: '1B', grade: 3.3 },
-    { name: 'Gift Present', class: '1A', grade: 4.2 },
-    { name: 'Tolu Jacob', class: '1B', grade: 2.7 }
+    { name: 'Anna William', class: '1A', grade: 3.5, path: './profiles/anna.jpeg' },
+    { name: 'David Banner', class: '1B', grade: 4.0, path: './profiles/david.jpeg' },
+    { name: 'Gift Present', class: '1A', grade: 4.2, path: './profiles/gift.jpeg' },
+    { name: 'John Doe', class: '1A', grade: 3.0, path: './profiles/john.jpg' },
+    { name: 'Tolu Jacob', class: '1B', grade: 4.5, path: './profiles/tolu.jpg' },
+    { name: 'Zack black', class: '1B', grade: 3.7, path: './profiles/zack.jpeg' }
+
 ];
 
 profiles.map((val) => {
@@ -82,7 +84,7 @@ let render1A = () => {
 
         table.appendChild(tabRow);
 
-        
+
     })
 }
 
@@ -130,3 +132,24 @@ let render1B = () => {
 };
 
 btn_1B.addEventListener('click', render1B);
+
+// Images
+
+profiles.map((val) => {
+
+    let imageCard = document.createElement('div');
+    imageCard.setAttribute('class', 'img_card');
+
+    let img = document.createElement('img');
+    img.setAttribute('src', val.path)
+    img.setAttribute('alt', 'image of student');
+
+    let imgName = document.createElement('p');
+    imgName.setAttribute('class', 'title');
+    imgName.textContent = val.name;
+
+    imageCard.appendChild(img);
+    imageCard.appendChild(imgName);
+
+    imgDiv.append(imageCard);
+})
