@@ -11,9 +11,10 @@ h1 {
     text-align: center;
 }
 
-
-
-
+body {
+    background-color: rgba(0, 6, 59, 0.285);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 /* Sections */
 .container {
@@ -23,8 +24,9 @@ h1 {
 }
 
 header {
-    background-color: rgb(255, 248, 220);
+    background-color:rgb(80, 134, 135);
     padding: 1.5em;
+    color: white;
 }
 
 ul {
@@ -51,8 +53,6 @@ a {
     text-align: center;
     background-color: white;
     padding: .1em;
-
-
 }
 
 .sec,
@@ -68,8 +68,6 @@ a {
     color: white;
     border-collapse: collapse;
 
-
-
 }
 
 td {
@@ -78,6 +76,7 @@ td {
     /* background-color: hsla(180, 99%, 33%, 0.363); */
     padding: .5em;
     margin: 2em;
+    background-color: white;
     
 }
 
@@ -94,17 +93,12 @@ td {
 
 /* .sec {} */
 
-
-
 .sec_2 {
     padding: .6rem;
     display: flex;
-    border: 1px solid;
+    border: 1px solid black;
     background-color: rgb(80, 134, 135);
-    color: white;
-
-    
-    
+    color: white;    
 }
 
 p:first-child {

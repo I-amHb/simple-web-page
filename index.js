@@ -81,6 +81,8 @@ let render1A = () => {
 
 
         table.appendChild(tabRow);
+
+        
     })
 }
 
