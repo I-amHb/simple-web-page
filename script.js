@@ -6,12 +6,12 @@ const btn_1A = document.querySelector('._1A');
 const btn_1B = document.querySelector('._1B');
 
 const profiles = [
-    { name: 'John Doe', class: '1A', grade: 3.0, path: './profiles/john.jpeg' },
-    { name: 'Tolu Jacob', class: '1B', grade: 4.5, path: './profiles/tolu.jpg' },
-    { name: 'David Banner', class: '1B', grade: 4.0, path: './profiles/david.jpeg' },
-    { name: 'Anna William', class: '1A', grade: 3.5, path: './profiles/anna.jpeg' },
-    { name: 'Zack black', class: '1B', grade: 3.7, path: './profiles/zack.jpeg' },
-    { name: 'Gift Present', class: '1A', grade: 4.2, path: './profiles/gift.jpeg' }
+    { name: 'John Doe', class: '1A', grade: 3.0, path: '/profiles/john.jpeg' },
+    { name: 'Tolu Jacob', class: '1B', grade: 4.5, path: '/profiles/tolu.jpg' },
+    { name: 'David Banner', class: '1B', grade: 4.0, path: '/profiles/david.jpeg' },
+    { name: 'Anna William', class: '1A', grade: 3.5, path: '/profiles/anna.jpeg' },
+    { name: 'Zack black', class: '1B', grade: 3.7, path: '/profiles/zack.jpeg' },
+    { name: 'Gift Present', class: '1A', grade: 4.2, path: '/profiles/gift.jpeg' }
     
 ];
 
