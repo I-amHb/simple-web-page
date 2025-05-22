@@ -6,13 +6,13 @@ const btn_1A = document.querySelector('._1A');
 const btn_1B = document.querySelector('._1B');
 
 const profiles = [
-    { name: 'Anna William', class: '1A', grade: 3.5, path: './profiles/anna.jpeg' },
-    { name: 'David Banner', class: '1B', grade: 4.0, path: './profiles/david.jpeg' },
-    { name: 'Gift Present', class: '1A', grade: 4.2, path: './profiles/gift.jpeg' },
     { name: 'John Doe', class: '1A', grade: 3.0, path: './profiles/john.jpg' },
     { name: 'Tolu Jacob', class: '1B', grade: 4.5, path: './profiles/tolu.jpg' },
-    { name: 'Zack black', class: '1B', grade: 3.7, path: './profiles/zack.jpeg' }
-
+    { name: 'David Banner', class: '1B', grade: 4.0, path: './profiles/david.jpeg' },
+    { name: 'Anna William', class: '1A', grade: 3.5, path: './profiles/anna.jpeg' },
+    { name: 'Zack black', class: '1B', grade: 3.7, path: './profiles/zack.jpeg' },
+    { name: 'Gift Present', class: '1A', grade: 4.2, path: './profiles/gift.jpeg' }
+    
 ];
 
 profiles.map((val) => {
@@ -135,7 +135,7 @@ btn_1B.addEventListener('click', render1B);
 
 // Images
 
-profiles.map((val) => {
+profiles.map((val)=>{
 
     let imageCard = document.createElement('div');
     imageCard.setAttribute('class', 'img_card');
