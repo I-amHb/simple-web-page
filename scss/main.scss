@@ -1,63 +1,65 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    /* border: 1px red solid; */
+@import 'resets';
+@import 'variables';
+
+@mixin flexdisplay {
+    display: flex;
 }
 
-/* =============
-    Typography
-    ============= */
-h1 {
-    text-align: center;
-    color: aliceblue;
-}
 
 body {
     background-color: rgba(0, 6, 59, 0.285);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* Sections */
+//  sections
 .container {
-    /* border: 1px blue solid; */
+    // border: 1px blue solid;
     padding: .5em;
     margin: 2.5rem 0;
 }
 
+
 header {
-    background-color:rgb(80, 134, 135);
+    box-shadow: $shadow;
+    background-color: $primary-color;
     padding: 1.5em;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: $centerAlign;
+    color: $alBlue;
 }
 
 ul {
-    display: flex;
-    list-style: none;
-    justify-content: center;
+    @include flexdisplay;
+    list-style: $none;
+    justify-content: $centerAlign;
     padding: 0;
-}
 
-li {
-    margin: .75rem;
+    li {
+        margin: .75rem;
 
-    /* background-color: white; */
+        // background-color: white;
 
+    }
 }
 
 a {
     display: block;
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: $none;
     border-radius: .3rem;
     width: 3em;
-    text-align: center;
-    background-color: aliceblue;
+    text-align: $centerAlign;
+    background-color: $alBlue;
     padding: .1em;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: $shadow;
+    transition-duration: .5s;
+    transition-timing-function: linear;
 }
 
 a:hover {
-    background-color: rgb(80, 134, 135);
+    background-color: $primary-color;
     color: antiquewhite;
 }
 
@@ -68,10 +70,10 @@ a:hover {
     /* border: 1px red solid; */
 }
 
-/* Table start */
+// table start
 
 .all_t {
-    width: 100%;
+    width: $hundred;
     border: 1px solid black;
     color: white;
     border-collapse: collapse;
@@ -84,30 +86,28 @@ td {
     padding: .5em;
     margin: 2em;
     background-color: antiquewhite;
-    
+
 }
 
 .tableRow {
-    width: 100%;
+    width: $hundred;
 }
 
 .table-head {
-    background-color: rgb(80, 134, 135);
+    background-color: $primary-color;
     font-weight: 700;
-    border: none;
-    color: aliceblue;
+    border: $none;
+    color: $alBlue;
 }
 
-/* Table end */
-
-/* .sec {} */
+// table end
 
 .sec_2 {
     padding: .6rem;
-    display: flex;
+    @include flexdisplay;
     border: 1px solid black;
-    background-color: rgb(80, 134, 135);
-    color: aliceblue;    
+    background-color: $primary-color;
+    color: $alBlue;    
 }
 
 p:first-child {
@@ -120,24 +120,24 @@ p:first-child {
     /* border: 1px solid green; */
     max-width: 1045px;
     padding:4rem 0;
-    width: 100%;
+    width: $hundred;
     margin: 0 auto;
 }
 
 h2 {
-    background-color: rgb(80, 134, 135);
+    background-color: $primary-color;
     margin-bottom: 2em;
     height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexdisplay;
+    justify-content: $centerAlign;
+    align-items: $centerAlign;
     border-radius: .2em;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: aliceblue;
+    box-shadow: $shadow;
+    color: $alBlue;
 }
 
 .img_div {
-    display: flex;
+    @include flexdisplay;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -149,34 +149,28 @@ h2 {
     /* border: 1px solid pink; */
     background-color: antiquewhite;
     max-width: 250px;
-    margin:2rem 0;
     border-radius: .5rem;
     padding: 1rem;
     margin: 0 auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: $shadow
 
 }
 
 img {
-    width: 100%;
+    width: $hundred;
     border-radius: 50%;
     
 }
 
 .title {
-    display: flex;
+    @include flexdisplay;
     height: 40px;
-    justify-content: center;
-    align-items: center;
+    justify-content: $centerAlign;
+    align-items: $centerAlign;
     font-weight: 500;
 }
 
-
-/* @media (max-width: 770px) {
-    .sec_3 {
-        margin: 0;
-    }
-} */
+// Screen size
 
 @media (max-width: 430px) {
     .sec_3 {
